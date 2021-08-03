@@ -40,7 +40,7 @@ readyButton.forEach(ready => {
 
 // Doubleclick Event 
 
-const busTitle = document.querySelector('.logo-heading');
+const busTitle = document.querySelector('.footer');
 
 busTitle.addEventListener('dblclick', function(event) {
     event.target.style.color = 'red'
@@ -118,3 +118,16 @@ function zoom(event) {
   let scale = 1;
   const el = document.querySelector('img');
   el.onwheel = zoom;
+
+  
+// Change Element
+
+const imageChange = document.getElementById("img/destination.jpg");
+console.log(imageChange);
+imageChange.addEventListener("click", function() {
+    if(imageChange.src != "img/fun-bus.jpg"){
+        imageChange.src = "img/fun-bus.jpg";
+    }else{
+        imageChange.src = "img/destination.jpg";
+    }
+})
